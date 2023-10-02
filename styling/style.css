@@ -1,0 +1,89 @@
+@font-face {
+  font-family: triforce;
+  src: url(../fonts/botw/botw.otf);
+}
+@font-face {
+  font-family: botw;
+  src: url(../fonts/triforce/Triforce.ttf);
+}
+body {
+  background-image: url("../images/lightTexture.png");
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-image: url("../images/darkTexture.jpg");
+}
+
+#navLinks, #triforce {
+  display: none;
+}
+
+nav a {
+  font-family: botw;
+  font-size: 30px;
+  width: 80%;
+  display: inline-block;
+  color: #50EAA8;
+  padding: 5px 12px;
+  text-decoration: none;
+}
+
+#navLinks > a:hover {
+  color: #4DA27E;
+  transition: ease-in 0.2s;
+}
+
+nav > a > img {
+  position: relative;
+  top: 12.5px;
+  height: 100px;
+  transform: rotate(-90deg);
+  left: 30px;
+}
+
+nav > a > img:hover {
+  transform: rotate(0deg);
+  left: 0px;
+  transition: ease-in 0.1s;
+}
+
+nav #navLinks {
+  max-height: 0px;
+  transition: max-height 0.15s ease-out;
+  overflow: hidden;
+  display: block;
+}
+
+nav:hover #navLinks {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  nav {
+    text-align: center;
+  }
+  #triforce, #navLinks {
+    display: inline-block;
+  }
+  nav a {
+    width: auto;
+  }
+  #masterSword {
+    display: none;
+  }
+  nav > div > a > img {
+    position: relative;
+    top: 12.5px;
+    height: 55px;
+  }
+  nav #navLinks {
+    max-height: none;
+  }
+  nav:hover #navLinks {
+    max-height: none;
+  }
+}/*# sourceMappingURL=style.css.map */
