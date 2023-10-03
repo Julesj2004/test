@@ -44,9 +44,18 @@ nav a {
   transform: rotate(-90deg);
   left: 40px;
   transition: transform 0.15s ease-in-out;
+  z-index: 1;
 }
 
-nav:hover #masterSword {
+nav > label {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 10px;
+  z-index: 2;
+}
+
+nav input:checked ~ #masterSword {
   transform: rotate(0deg);
   top: 12.5px;
   left: 15px;
@@ -59,9 +68,13 @@ nav #navLinks {
   display: block;
 }
 
-nav:hover #navLinks {
+nav input:checked ~ #navLinks {
   max-height: 650px;
   transition: max-height 0.15s ease-in;
+}
+
+nav input {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -75,7 +88,7 @@ nav:hover #navLinks {
   nav a {
     width: auto;
   }
-  #masterSword {
+  #masterSword, nav > label > img {
     display: none;
   }
   nav > div > a > img {
@@ -88,6 +101,9 @@ nav:hover #navLinks {
   }
   nav:hover #navLinks {
     max-height: none;
+  }
+  input {
+    display: none;
   }
 }
 footer {
