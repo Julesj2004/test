@@ -16,7 +16,7 @@ nav {
   background-image: url("../images/darkTexture.jpg");
 }
 
-#navLinks, #triforce {
+#navLinks, nav > div > a > img {
   display: none;
 }
 
@@ -35,18 +35,18 @@ nav a {
   transition: ease-in 0.2s;
 }
 
-nav > a > img {
+#masterSword {
   position: relative;
-  top: 12.5px;
   height: 100px;
   transform: rotate(-90deg);
-  left: 30px;
+  left: 40px;
+  transition: transform 0.15s ease-in-out;
 }
 
-nav > a > img:hover {
+nav:hover #masterSword {
   transform: rotate(0deg);
-  left: 0px;
-  transition: ease-in 0.1s;
+  top: 12.5px;
+  left: 15px;
 }
 
 nav #navLinks {
@@ -57,8 +57,8 @@ nav #navLinks {
 }
 
 nav:hover #navLinks {
-  max-height: 500px;
-  transition: max-height 0.25s ease-in;
+  max-height: 650px;
+  transition: max-height 0.15s ease-in;
 }
 
 @media only screen and (min-width: 768px) {
@@ -66,7 +66,7 @@ nav:hover #navLinks {
   nav {
     text-align: center;
   }
-  #triforce, #navLinks {
+  nav > div > a > img, #navLinks {
     display: inline-block;
   }
   nav a {
