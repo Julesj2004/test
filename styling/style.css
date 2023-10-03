@@ -8,6 +8,9 @@
 }
 body {
   background-image: url("../images/lightTexture.png");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
 }
@@ -85,5 +88,34 @@ nav:hover #navLinks {
   }
   nav:hover #navLinks {
     max-height: none;
+  }
+}
+footer {
+  background-image: url("../images/darkTexture.jpg");
+  margin-top: auto;
+}
+
+footer > div {
+  padding: 2px 0px;
+}
+
+footer > div > h1 {
+  font-family: botw;
+  color: #4DA27E;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer > div > h1 {
+    padding: 0px 100px;
+  }
+  footer > div:nth-child(3) > h1 {
+    position: relative;
+    top: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
